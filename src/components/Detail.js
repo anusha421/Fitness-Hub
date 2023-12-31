@@ -30,7 +30,7 @@ const Detail = ({ exerciseDetail }) => {
     >
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
-        <Typography variant="h3">{name}</Typography>
+        <Typography variant="h3" sx={{ textTransform: 'capitalize' }}>{name}</Typography>
         <Typography variant="h4">Instructions</Typography>
         {instructions?.map((step, index) => (
           <Typography key={index} padding={0} margin={0}>

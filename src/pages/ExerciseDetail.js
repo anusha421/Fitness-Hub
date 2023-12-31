@@ -32,7 +32,7 @@ const ExerciseDetail = () => {
 
       setTargetMuscleExercises(targetMuscleExerciseData);
 
-      const equipmentExerciseData = await fetchData(`${exercisesDbUrl}/exercises/target/${exerciseDetailData.equipment}`, exerciseOptions);
+      const equipmentExerciseData = await fetchData(`${exercisesDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`, exerciseOptions);
 
       setEquipmentExercises(equipmentExerciseData);
     }
@@ -44,7 +44,7 @@ const ExerciseDetail = () => {
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
       <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
-      <SimilarExercises />
+      <SimilarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentExercises} />
     </Box>
   )
 }
